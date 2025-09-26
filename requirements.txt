@@ -1,4 +1,7 @@
 ultralytics
 opencv-python
 google-cloud-vision
+google-generativeai
+flask
+numpy
 
