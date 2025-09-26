@@ -1,9 +1,10 @@
 import './App.css';
+import ResponsiveAppBar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello World</h1>
+      <ResponsiveAppBar />
     </div>
   );
 }
