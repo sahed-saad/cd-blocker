@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import "./Navbar.css";
 
 const pages = ['Home', 'About', 'Tutorial'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -36,29 +37,60 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" sx={{ backgroundColor: '#F6F6F2', top: 0, zIndex: 1100 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          {/* Left side: Logo and navigation items */}
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+            {/* Logo for desktop */}
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <Typography
+              variant="h4"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 4,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 'bold',
+                letterSpacing: '.3rem',
+                color: '#1a237e',
+                textDecoration: 'none',
+              }}
+            >
+              CD
+            </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            {/* Navigation items for desktop */}
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+              {pages.map((page) => {
+                let href = '';
+                if (page === 'Home') href = '#home-section';
+                else if (page === 'About') href = '#about-section';
+                else if (page === 'Tutorial') href = '#tutorial-section';
+                return (
+                  <Button
+                    key={page}
+                    href={href}
+                    onClick={handleCloseNavMenu}
+                    sx={{ 
+                      my: 2, 
+                      color: '#1a237e', 
+                      display: 'block',
+                      fontSize: '1.1rem',
+                      fontWeight: 600
+                    }}
+                  >
+                    {page}
+                  </Button>
+                );
+              })}
+            </Box>
+          </Box>
+
+          {/* Mobile menu */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, alignItems: 'center' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -87,45 +119,41 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Typography sx={{ textAlign: 'center', color: '#1a237e' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
+
+            {/* Logo for mobile */}
+            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <Box
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+                display: { xs: 'flex', md: 'none' },
+                alignItems: 'center',
+                textDecoration: 'none',
+                color: 'inherit',
             }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+            >
+            <img 
+                src='/Profile.jpg' 
+                alt="LogoPic" 
+                style={{ 
+                width: '40px',
+                height: '40px',
+                objectFit: 'cover',
+                borderRadius: '50%'
+                }} 
+            />
+            </Box>
+                    </Box>
+              
+          {/* Right side: Profile avatar */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{ width: 64, height: 64 }} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -146,7 +174,7 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: 'center', color: '#1a237e' }}>{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>

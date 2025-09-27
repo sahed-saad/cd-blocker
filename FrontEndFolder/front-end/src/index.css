@@ -1,0 +1,24 @@
+
+html, body {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+	margin: 0;
+	background: url('/DataFabric.jpg') no-repeat center center fixed;
+	background-size: cover;
+	color: white;
+  background-repeat: no-repeat;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
+.main-content {
+  padding-top: 64px; /* Adjust this value to match your navbar height */
+}
