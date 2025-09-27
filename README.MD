@@ -1,12 +1,12 @@
-## 🛡️ AI CD Blocker
+## 🛡️ CD Blocker
 
-Real-time credit card detection and blurring for live streamers.
+Real-time credit card or sensitive information detection and blurring for live streamers.
 
 ### 🚨 The Problem
-- Streamers accidentally show credit cards on stream → identity theft, financial fraud, career damage.
+- Streamers accidentally show credit cards or any sensitive card-related info on stream → identity theft, financial fraud, career damage.
 
 ### ✨ Solution
-An AI-powered relay app that sits between the streamer and YouTube/Twitch, automatically detecting and blurring credit cards in real-time before the video ever reaches the platform.
+An AI-powered relay app that sits between the streamer and YouTube/Twitch, automatically detecting and blurring those sensitive information in real-time before the video ever reaches the platform, or while they stream.
 
 ### 🔧 How It Works
 - Gemini detects objects that might be credit cards
