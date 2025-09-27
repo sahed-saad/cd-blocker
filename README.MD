@@ -42,7 +42,7 @@ If you use Google Cloud Vision, ensure your credentials are configured (for exam
 ```
 
 ### 🎬 Demo
-[Placeholder] 2-minute demo video showing live credit card detection and blurring.
+2-minute demo video showing live credit card detection and blurring: https://youtu.be/HuIr3hJLkiU
 
 —
 
