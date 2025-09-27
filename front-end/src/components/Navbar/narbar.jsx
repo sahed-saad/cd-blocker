@@ -75,16 +75,22 @@ function ResponsiveAppBar() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
               {pages.map((page) => {
                 let href = '';
+                let onClick = handleCloseNavMenu;
                 if (page === 'Home') href = '#home-section';
                 else if (page === 'About') href = '#about-section';
                 else if (page === 'Tutorial') href = '#tutorial-section';
-                else if (page == 'product') {href='./product'
+                else if (page === 'product') {
+                  href = '/product';
+                  onClick = (e) => {
+                    e.preventDefault();
+                    window.open('/product', '_blank');
+                  };
                 }
                 return (
                   <Button
                     key={page}
                     href={href}
-                    onClick={handleCloseNavMenu}
+                    onClick={onClick}
                     sx={{ 
                       my: 2, 
                       color: '#1a237e', 
