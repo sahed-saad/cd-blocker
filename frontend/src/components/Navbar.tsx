@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const pages = ["Home", "About", "Tutorial"];
+const pages = ["Home", "About", "Features","Tutorial"];
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -32,11 +32,11 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#F6F6F2] shadow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+      <div className="max-w-7xl mx-auto pl-2 pr-4 sm:pl-4 sm:pr-6 lg:pl-6 lg:pr-8">
+        <div className="flex justify-start h-16 items-center">
           <div className="flex items-center">
-            <span className="text-2xl font-bold tracking-widest text-[#1a237e] mr-6">
-              CD
+            <span className="text-2xl font-bold tracking-widest text-[#1a237e] mr-2">
+              <img src="/Profile.jpg" className="w-12 h-12 rounded-full object-cover" alt="Profile" />
             </span>
 
             {/* Desktop Links */}
