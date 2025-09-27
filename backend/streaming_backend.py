@@ -93,7 +93,7 @@ class StreamingCreditCardDetector:
     def start_camera(self, camera_index: int = 0) -> bool:
         """Initialize camera"""
         try:
-            self.cap = cv2.VideoCapture(camera_index)
+            self.cap = cv2.VideoCapture(1)
             if not self.cap.isOpened():
                 return False
             
