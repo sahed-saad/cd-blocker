@@ -2,9 +2,9 @@
 
 .tutorial-section {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(4, 13, 47, 0.95) 0%, rgba(9, 28, 87, 0.92) 100%);
-    display: block;
-    padding: 0 1rem 0 1rem;
+  background: #00092a;
+  display: block;
+  padding: 0 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -24,16 +24,18 @@
 }
 
 .tutorial-container {
-  max-width: 900px;
+  max-width: 400px;
   width: 90%;
-  margin: 0 auto;
-    max-width: 900px;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    padding-top: 0;
-    margin-top: 0;
+  margin: 4.5rem auto 0 auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
 }
 
 /* Title Section - Centered at Top */
@@ -44,22 +46,20 @@
 }
 
 .tutorial-title {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 1rem 0;
+  color: #fff;
+  margin: 0 0 1.2rem 0;
   text-align: center;
-  letter-spacing: 0.1em;
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 4px 12px rgba(26, 35, 126, 0.3);
-  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 8px rgba(26,35,126,0.18), 0 4px 16px rgba(0,0,0,0.18);
+  background: linear-gradient(90deg, #e3f2fd 0%, #90caf9 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  padding-bottom: 0.5rem;
-  scroll-margin-top: 140px;
+  padding-bottom: 0.7rem;
+  scroll-margin-top: 120px;
   margin-top: 0;
 }
 
@@ -69,19 +69,20 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+  background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
   border-radius: 2px;
 }
 
 .tutorial-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.18rem;
+  line-height: 1.7;
   color: #e3f2fd;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
+  font-weight: 500;
 }
 
 /* Video Showcase Section - Middle Part */

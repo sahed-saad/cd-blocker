@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import "./Navbar.css";
 
-const pages = ['Home', 'About', 'Tutorial'];
+const pages = ['Home', 'About', 'Tutorial','product'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             {/* Logo for desktop */}
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
+            <Box
               variant="h4"
               noWrap
               component="a"
@@ -59,8 +59,17 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-              CD
-            </Typography>
+              <img
+              src='/Profile.jpg'
+              alt ="CD Blocker Logo"
+              style={{
+                width: '50px',
+                height: '50px',
+                objectFit: 'cover',
+                borderRadius: '50%'
+              }}
+              ></img>
+            </Box>
 
             {/* Navigation items for desktop */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
@@ -69,6 +78,8 @@ function ResponsiveAppBar() {
                 if (page === 'Home') href = '#home-section';
                 else if (page === 'About') href = '#about-section';
                 else if (page === 'Tutorial') href = '#tutorial-section';
+                else if (page == 'product') {href='./product'
+                }
                 return (
                   <Button
                     key={page}

@@ -3,13 +3,13 @@
 .about-section {
   min-height: 100vh;
   padding: 2rem 1rem;
-  background: linear-gradient(135deg, rgba(4, 13, 47, 0.95) 0%, rgba(9, 28, 87, 0.92) 100%);
+  background: #00092a;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  color:white;
+  color:#00092a;
 }
 
 /* Optional: Add a subtle background pattern */
@@ -30,7 +30,7 @@
   max-width: 700px;
   width: 90%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.08);
+  background: #F6F6F2;
   backdrop-filter: blur(10px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -53,7 +53,7 @@
   text-align: center;
   width: 100%;
   letter-spacing: 0.1em;
-  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  background: #00092a;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@
 .about-goal {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #bbdefb;
+  color: #00092a;
   margin: 1.5rem 0 0 0;
   text-align: center;
   font-weight: 600;
