@@ -434,7 +434,7 @@ def main():
     print()
 
     # ADD YOUR GEMINI API KEY HERE:
-    api_key = "AIzaSyAQHlIG04B8Q0IQuFZr-INcNILbDrACxUY"
+    api_key = "YOUR_API_KEY_HERE"
 
     if api_key == "YOUR_API_KEY_HERE" or not api_key:
         print("❌ Please add your Gemini API key to the code!")
