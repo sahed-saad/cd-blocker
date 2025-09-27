@@ -9,9 +9,9 @@ const App = () => {
     <div className="App">
       <ResponsiveAppBar />
       <div className='main-content'>
-        <section id="home-section"><Home /></section>
-        <section id="about-section"><About /></section>
-        <section id="tutorial-section"><Tutorial /></section>
+  <section><Home /></section>
+      <section id="about-section"><About /></section>
+      <section id="tutorial-section"><Tutorial /></section>
       </div>
     </div>
   )

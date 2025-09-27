@@ -3,7 +3,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-header">
-        <h1 className="home-title">
+        <h1 className="home-title" id="home-section">
           Welcome to <span className="cd-blocker">CD Blocker</span>
         </h1>
         <p className="home-description">

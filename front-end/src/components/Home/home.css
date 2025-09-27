@@ -2,60 +2,71 @@
   position: relative;
   min-height: 100vh;
   padding: 10px;
-  margin-top: 0%;
+  margin-top: -50px;
+}
+.home-title {
+  scroll-margin-top: 120px;
 }
 
 .home-header {
   position: absolute;
-  top: 1rem;
+  top: 0.5rem; /* Reduced from 1rem to move upward */
   right: 2rem;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1.5rem;
+  gap: 1rem; /* Reduced gap to compress content upward */
 }
 
 .home-title {
   font-size: 3.5rem;
   font-weight: 900;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem; /* Reduced margin */
   white-space: nowrap;
   text-align: right;
   width: 100%;
-  margin-left: 0;
   overflow: visible;
   text-overflow: unset;
   justify-self: flex-end;
   align-self: flex-end;
+  padding-right: 50px;
+  padding-top: 0; /* Ensure no top padding */
 }
 
 .home-description {
   max-width: 550px;
   font-size: 1.2rem;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.5; /* Slightly reduced line height */
   padding-right: 50px;
   margin-top: 0;
   text-align: right;
+  padding-left: 50px;
+  margin-bottom: 0; /* Remove bottom margin */
 }
+
 .home-button {
-  margin-top: 1.5rem;
-  padding: 0.8rem 2.2rem;
+  margin-top: 0; /* Remove top margin */
+  padding: 0.8rem 2.6rem;
   font-size: 1.2rem;
   font-weight: 700;
-  background: rgba(4, 13, 47, 0.92);
-  color: #fff;
+  background: white;
+  color: #11175d;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 12px rgba(26,35,126,0.10);
   transition: background 0.2s, color 0.2s, transform 0.1s;
-  align-self: flex-end;
+  align-self: flex-start !important;
+  margin-left: -100px !important;
+  position: relative;
+  left: -50px;
 }
+
 .home-button:hover {
-  background: white;
-  color: #1a237e;
+  background: rgba(4, 13, 47, 0.92);
+  color: #fff;
   transform: translateY(-2px) scale(1.04);
 }
